@@ -1,40 +1,40 @@
-agent.sources = source1 source2
-agent.sinks = sink1 sink2
-agent.channels = c1 c2
+nyctaxi1.sources = source1 source2
+nyctaxi1.sinks = sink1 sink2
+nyctaxi1.channels = c1 c2
 
 # Folder Source
-agent.sources.source1.type = spooldir
-agent.sources.source1.channels = c1
-agent.sources.source1.spoolDir = /tmp/nyctaxi/trip
-agent.sources.source1.deletePolicy = immediate
-agent.sources.source1.batchSize = 1000
-agent.sources.source1.deserializer = line
-agent.sources.source1.inputCharset = UTF8
+nyctaxi1.sources.source1.type = spooldir
+nyctaxi1.sources.source1.channels = c1
+nyctaxi1.sources.source1.spoolDir = /tmp/nyctaxi/trip
+nyctaxi1.sources.source1.deletePolicy = immediate
+nyctaxi1.sources.source1.batchSize = 1000
+nyctaxi1.sources.source1.deserializer = line
+nyctaxi1.sources.source1.inputCharset = UTF8
 
-agent.sources.source2.type = spooldir
-agent.sources.source2.channels = c2
-agent.sources.source2.spoolDir = /tmp/nyctaxi/fare
-agent.sources.source2.deletePolicy = immediate
-agent.sources.source2.batchSize = 1000
-agent.sources.source2.deserializer = line
-agent.sources.source2.inputCharset = UTF8
+nyctaxi1.sources.source2.type = spooldir
+nyctaxi1.sources.source2.channels = c2
+nyctaxi1.sources.source2.spoolDir = /tmp/nyctaxi/fare
+nyctaxi1.sources.source2.deletePolicy = immediate
+nyctaxi1.sources.source2.batchSize = 1000
+nyctaxi1.sources.source2.deserializer = line
+nyctaxi1.sources.source2.inputCharset = UTF8
 
 # Sink
-agent.sinks.sink1.type = avro
-agent.sinks.sink1.channel = c1
-agent.sinks.sink1.hostname = 10.0.1.224
-agent.sinks.sink1.port = 4545
+nyctaxi1.sinks.sink1.type = avro
+nyctaxi1.sinks.sink1.channel = c1
+nyctaxi1.sinks.sink1.hostname = 10.0.1.224
+nyctaxi1.sinks.sink1.port = 4545
 
-agent.sinks.sink2.type = avro
-agent.sinks.sink2.channel = c2
-agent.sinks.sink2.hostname = 10.0.1.224
-agent.sinks.sink2.port = 4546
+nyctaxi1.sinks.sink2.type = avro
+nyctaxi1.sinks.sink2.channel = c2
+nyctaxi1.sinks.sink2.hostname = 10.0.1.224
+nyctaxi1.sinks.sink2.port = 4546
 
 # Channel
-agent.channels.c1.type = memory
-agent.channels.c1.capacity = 1000
-agent.channels.c1.transactionCapacity = 100
+nyctaxi1.channels.c1.type = memory
+nyctaxi1.channels.c1.capacity = 1000
+nyctaxi1.channels.c1.transactionCapacity = 100
 
-agent.channels.c2.type = memory
-agent.channels.c2.capacity = 1000
-agent.channels.c2.transactionCapacity = 100
+nyctaxi1.channels.c2.type = memory
+nyctaxi1.channels.c2.capacity = 1000
+nyctaxi1.channels.c2.transactionCapacity = 100
