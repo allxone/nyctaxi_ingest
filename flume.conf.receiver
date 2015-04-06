@@ -26,8 +26,8 @@ nyctaxi2.sinks.sink1.hdfs.path         		= /data/samples/nyctaxi/trip
 nyctaxi2.sinks.sink1.hdfs.filePrefix   		= tripdata
 nyctaxi2.sinks.sink1.hdfs.fileSuffix   		= .avro
 nyctaxi2.sinks.sink1.hdfs.inUsePrefix  		= _
-nyctaxi2.sinks.sink1.hdfs.rollInterval		= 60
-nyctaxi2.sinks.sink1.hdfs.rollCount		= 1000
+nyctaxi2.sinks.sink1.hdfs.rollInterval		= 300
+nyctaxi2.sinks.sink1.hdfs.rollCount		= 0
 nyctaxi2.sinks.sink1.hdfs.rollSize		= 134217728
 
 
@@ -43,8 +43,8 @@ nyctaxi2.sinks.sink2.hdfs.path         		= /data/samples/nyctaxi/fare
 nyctaxi2.sinks.sink2.hdfs.filePrefix   		= faredata
 nyctaxi2.sinks.sink2.hdfs.fileSuffix   		= .avro
 nyctaxi2.sinks.sink2.hdfs.inUsePrefix  		= _
-nyctaxi2.sinks.sink2.hdfs.rollInterval		= 60
-nyctaxi2.sinks.sink2.hdfs.rollCount		= 1000
+nyctaxi2.sinks.sink2.hdfs.rollInterval		= 300
+nyctaxi2.sinks.sink2.hdfs.rollCount		= 0
 nyctaxi2.sinks.sink2.hdfs.rollSize		= 134217728
 
 # Channel

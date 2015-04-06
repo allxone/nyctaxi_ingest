@@ -32,9 +32,9 @@ nyctaxi1.sinks.sink2.port = 4546
 
 # Channel
 nyctaxi1.channels.c1.type = memory
-nyctaxi1.channels.c1.capacity = 1000
-nyctaxi1.channels.c1.transactionCapacity = 100
+nyctaxi1.channels.c1.capacity = 10000
+nyctaxi1.channels.c1.transactionCapacity = 1000
 
 nyctaxi1.channels.c2.type = memory
-nyctaxi1.channels.c2.capacity = 1000
-nyctaxi1.channels.c2.transactionCapacity = 100
+nyctaxi1.channels.c2.capacity = 10000
+nyctaxi1.channels.c2.transactionCapacity = 1000
