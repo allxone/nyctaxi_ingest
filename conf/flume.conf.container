@@ -1,0 +1,40 @@
+nyctaxi1.sources = source1 source2
+nyctaxi1.sinks = sink1 sink2
+nyctaxi1.channels = c1 c2
+
+# Folder Source
+nyctaxi1.sources.source1.type = spooldir
+nyctaxi1.sources.source1.channels = c1
+nyctaxi1.sources.source1.spoolDir = /tmp/nyctaxi/trip
+nyctaxi1.sources.source1.deletePolicy = immediate
+nyctaxi1.sources.source1.batchSize = 1000
+nyctaxi1.sources.source1.deserializer = line
+nyctaxi1.sources.source1.inputCharset = UTF8
+
+nyctaxi1.sources.source2.type = spooldir
+nyctaxi1.sources.source2.channels = c2
+nyctaxi1.sources.source2.spoolDir = /tmp/nyctaxi/fare
+nyctaxi1.sources.source2.deletePolicy = immediate
+nyctaxi1.sources.source2.batchSize = 1000
+nyctaxi1.sources.source2.deserializer = line
+nyctaxi1.sources.source2.inputCharset = UTF8
+
+# Sink
+nyctaxi1.sinks.sink1.type = avro
+nyctaxi1.sinks.sink1.channel = c1
+nyctaxi1.sinks.sink1.hostname = 10.0.1.224
+nyctaxi1.sinks.sink1.port = 4545
+
+nyctaxi1.sinks.sink2.type = avro
+nyctaxi1.sinks.sink2.channel = c2
+nyctaxi1.sinks.sink2.hostname = 10.0.1.224
+nyctaxi1.sinks.sink2.port = 4546
+
+# Channel
+nyctaxi1.channels.c1.type = memory
+nyctaxi1.channels.c1.capacity = 10000
+nyctaxi1.channels.c1.transactionCapacity = 1000
+
+nyctaxi1.channels.c2.type = memory
+nyctaxi1.channels.c2.capacity = 10000
+nyctaxi1.channels.c2.transactionCapacity = 1000
