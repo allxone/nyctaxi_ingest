@@ -2,9 +2,9 @@ FROM allxone/flume-ng
 MAINTAINER allxone@hotmail.com
 
 # Ingest data from specified directory into HDFS
-RUN mkdir /tmp/flumein
+RUN mkdir /tmp/flumein && mkdir /tmp/flumeconf
 VOLUME /tmp/flumein
+VOLUME /tmp/flumeconf
 
 WORKDIR /usr/local/apache-flume-1.5.2-bin
-ENTRYPOINT bin/flume-ng agent -n nyctaxi1 -c conf -f conf/flume.conf
-COPY flume.conf.container /usr/local/apache-flume-1.5.2-bin/conf/flume.conf
+ENTRYPOINT bin/flume-ng agent -n $FLUME_AGENT -c conf -f /tmp/flumeconf/$FLUME_CONF_FILE
